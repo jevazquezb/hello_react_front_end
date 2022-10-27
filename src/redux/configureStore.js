@@ -1,4 +1,4 @@
-import { applyMiddleware } from "redux";
+import { applyMiddleware } from 'redux';
 import { configureStore } from '@reduxjs/toolkit';
 import thunk from 'redux-thunk';
 import logger from 'redux-logger';
@@ -7,7 +7,7 @@ import greetingReducer from './greeting_reducer';
 const middleware = applyMiddleware(thunk, logger);
 const store = configureStore({
   reducer: {
-    greetings: greetingReducer
+    greetings: greetingReducer,
   },
 }, middleware);
 
